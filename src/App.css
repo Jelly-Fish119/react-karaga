@@ -1,0 +1,57 @@
+.main-content {
+  flex: 1;
+  margin-left:350px;
+  background-color: #f3f3f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f3f3f9;
+}
+
+/* Form styles */
+.form-control:focus {
+  box-shadow: none;
+  border-color: #FF6B6B;
+}
+
+.form-control.bg-light {
+  border: 1px solid #e9ecef;
+}
+
+/* Table styles */
+.table > :not(caption) > * > * {
+  padding: 1rem;
+}
+
+.table > thead {
+  background-color: #f8f9fa;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #FF6B6B;
+  border-color: #FF6B6B;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #ff5252;
+  border-color: #ff5252;
+  box-shadow: none;
+}
+
+/* Navbar styles */
+.navbar {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}

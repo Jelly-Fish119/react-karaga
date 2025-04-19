@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/admin/assets/(.*)",
+      "headers": {
+        "Content-Type": "application/javascript"
+      },
+      "dest": "/admin/assets/$1"
+    },
+    {
+      "src": "/admin/src/(.*)",
+      "headers": {
+        "Content-Type": "application/javascript"
+      },
+      "dest": "/admin/src/$1"
+    },
+    {
+      "src": "/admin",
+      "dest": "/admin/index.html"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/admin/index.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/admin/src/:path*",
+      "destination": "/admin/src/:path*"
+    }
+  ]
+} 

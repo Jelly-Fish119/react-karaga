@@ -1,0 +1,88 @@
+.sidebar {
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for the sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+/* Hover effects */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo-container {
+  border-bottom: 1px solid rgba(166, 176, 207, 0.1);
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.section-title {
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: #6A7187;
+  font-weight: 600;
+}
+
+.sidebar-content {
+  padding-top: 1rem;
+}
+
+.sidebar-link {
+  color: #A6B0CF !important;
+  padding: 0.625rem 1.5rem !important;
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-link.active {
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 2px solid #FF6B6B;
+}
+
+.sidebar-link svg {
+  font-size: 1.1rem;
+}
+
+.logout-btn {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
+}
+
+.logout-btn:active {
+  background-color: rgba(255, 255, 255, 0.2);
+} 
