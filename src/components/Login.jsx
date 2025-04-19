@@ -46,7 +46,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post(`${BACKEND_URL}/api/admin/login`, {
+      const response = await axios.post(`${BACKEND_URL}/api/login`, {
         email,
         password
       });
@@ -69,7 +69,7 @@ const Login = () => {
 
       // Redirect to dashboard after a short delay
       setTimeout(() => {
-        navigate('/admin/dashboard');
+        navigate('/dashboard');
       }, 200);
 
     } catch (err) {
