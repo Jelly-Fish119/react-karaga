@@ -40,7 +40,7 @@ const ProtectedRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   
   if (!token) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/admin" replace />;
   }
 
   return children;
@@ -51,11 +51,11 @@ function App() {
     <Router>
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={<Login />} />
+        <Route path="/admin" element={<Login />} />
         
         {/* Protected Admin Routes */}
         <Route
-          path="/*"
+          path="/admin/*"
           element={
             <ProtectedRoute>
               <div className="app">
@@ -192,7 +192,7 @@ function App() {
         />
 
         {/* Root route redirect to admin */}
-        <Route path="/" element={<Navigate to="/" replace />} />
+        <Route path="/" element={<Navigate to="/admin" replace />} />
 
         {/* Catch all route for 404 */}
         <Route path="*" element={<NotFound />} />
