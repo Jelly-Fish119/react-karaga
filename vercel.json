@@ -11,32 +11,32 @@
   ],
   "routes": [
     {
-      "src": "/assets/(.*)",
+      "src": "/admin/assets/(.*)",
       "headers": {
         "Content-Type": "application/javascript"
       },
-      "dest": "/assets/$1"
+      "dest": "/admin/assets/$1"
     },
     {
-      "src": "/src/(.*)",
+      "src": "/admin/src/(.*)",
       "headers": {
         "Content-Type": "application/javascript"
       },
-      "dest": "/src/$1"
+      "dest": "/admin/src/$1"
     },
     {
-      "src": "",
-      "dest": "/index.html"
+      "src": "/admin",
+      "dest": "/admin/index.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "/admin/(.*)",
+      "dest": "/admin/index.html"
     }
   ],
   "rewrites": [
     {
-      "source": "/src/:path*",
-      "destination": "/src/:path*"
+      "source": "/admin/src/:path*",
+      "destination": "/admin/src/:path*"
     }
   ]
 } 
